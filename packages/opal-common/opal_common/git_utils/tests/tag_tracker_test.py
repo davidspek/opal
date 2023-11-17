@@ -68,7 +68,10 @@ def test_pull_with_new_commits(
     assert prev != latest
     assert most_recent_commit_before_pull == prev
     assert (
-        remote_repo.tags.__getattr__("test_tag").commit == repo.tags.__getattr__("test_tag").commit == latest == tracker.latest_commit
+        remote_repo.tags.__getattr__("test_tag").commit
+        == repo.tags.__getattr__("test_tag").commit
+        == latest
+        == tracker.latest_commit
     )
 
 

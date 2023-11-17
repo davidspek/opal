@@ -114,7 +114,11 @@ class GitPolicySource(BasePolicySource):
         )
         has_changes, prev, latest = self._tracker.pull()
         if not has_changes:
-            logger.info("No new commits: {ref} is at '{head}'", ref=self._tracker.tracked_reference.name, head=latest.hexsha)
+            logger.info(
+                "No new commits: {ref} is at '{head}'",
+                ref=self._tracker.tracked_reference.name,
+                head=latest.hexsha,
+            )
         else:
             logger.info(
                 "Found new commits: old HEAD was '{prev_head}', new HEAD is '{new_head}'",
