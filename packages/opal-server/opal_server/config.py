@@ -131,7 +131,7 @@ class OpalServerConfig(Confi):
     )
     POLICY_REPO_MAIN_BRANCH = confi.str(
         "POLICY_REPO_MAIN_BRANCH",
-        "master",
+        None,
         description="The main branch of the policy repository",
     )
     POLICY_REPO_TAG = confi.str(
